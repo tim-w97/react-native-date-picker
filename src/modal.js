@@ -93,13 +93,13 @@ export const useModal = ({ props, id }) => {
     }
   }, [previousProps, props])
 
-  useEffect(() => {
-    const eventEmitter = new NativeEventEmitter(NativeModule)
-    eventEmitter.addListener('onConfirm', onConfirm)
-    eventEmitter.addListener('onCancel', onCancel)
-    return () => {
-      eventEmitter.removeAllListeners('onConfirm')
-      eventEmitter.removeAllListeners('onCancel')
-    }
-  }, [onCancel, onConfirm])
+  // useEffect(() => {
+  //   const eventEmitter = new NativeEventEmitter(NativeModule)
+  //   eventEmitter.addListener('onConfirm', onConfirm)
+  //   eventEmitter.addListener('onCancel', onCancel)
+  //   return () => {
+  //     eventEmitter.removeAllListeners('onConfirm')
+  //     eventEmitter.removeAllListeners('onCancel')
+  //   }
+  // }, [onCancel, onConfirm])
 }
